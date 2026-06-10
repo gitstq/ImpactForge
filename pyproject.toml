@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "impactforge"
+version = "1.0.0"
+description = "智能代码变更影响分析引擎 - Smart Code Change Impact Analysis Engine"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "ImpactForge Team", email = "team@impactforge.dev"}
+]
+keywords = ["git", "code-analysis", "impact-analysis", "risk-assessment", "cli", "developer-tools"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Quality Assurance",
+    "Topic :: Software Development :: Version Control :: Git",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent",
+]
+requires-python = ">=3.8"
+
+[project.scripts]
+impactforge = "impactforge.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/impactforge/impactforge"
+Documentation = "https://github.com/impactforge/impactforge#readme"
+Repository = "https://github.com/impactforge/impactforge"
+Issues = "https://github.com/impactforge/impactforge/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["impactforge*"]
